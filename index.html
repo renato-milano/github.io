@@ -7,7 +7,86 @@
     <title>Renato Milano</title>
 </head>
 <body>
-    <h1>Renato Milano Portfolio</h1>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="fullpage.css" rel="stylesheet">
+    <link href="animate.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <script src="fullpage.js"></script>
+<div id="fullpage">
+    <div class="section">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="animated bounceInDown">
+                    <h1 > <span style="color:royalblue"> Renato </span>Milano</h1>
+                    <p>A <span style="color:royalblue">stupid</span> guy with no free time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container h-100">
+                    <h1>About <span style="color:royalblue"> Me</span></h1>
+                    <br>
+                    <br>
+                    <br>
+                <p style="float:left;margin-top: 150px">I Love <span style="color:royalblue"> Pizza</span> and <span style="color:royalblue"> Code</span>.</p>
+                <img style="float:right" class="animated fadeInLeft" src="./assets/profile.jpg" >
+            </div>
+        </div>
+    
+    <div class="section">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="animated bounceInDown">
+                    <h1 >e<span style="color:royalblue"> Bestemmio</span>.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+   
+    
     
 </body>
+<script>
+    AOS.init();
+
+
+new fullpage('#fullpage', {
+    navigation: true,
+    responsiveWidth: 700,
+    anchors: ['main', 'test', 'blasfemy'],
+    parallax: true,
+    onLeave: function(origin, destination, direction){
+        console.log("Leaving section" + origin.index);
+    },
+});
+
+
+  </script>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Monda:700|Permanent+Marker&display=swap');
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    font-size: 100px;
+    
+}
+p{
+    size: 5%;
+    font-family: 'Permanent Marker', cursive;
+}
+.section {
+  text-align:center;
+  font-size: 3em;
+}
+</style>
 </html>
