@@ -19,8 +19,8 @@
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-12">
-                    <div class="animated bounceInDown">
-                    <h1 > <span style="color:royalblue"> Renato </span>Milano</h1>
+                    <div  class="animated bounceInDown">
+                    <h1 id="nameMain"> <span style="color:royalblue"> Renato </span> <br/>Milano</h1>
                     <p>A <span style="color:royalblue">stupid</span> guy with some free time.</p>
                     </div>
                 </div>
@@ -153,23 +153,23 @@ new fullpage('#fullpage', {
   </script>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Monda:700|Permanent+Marker&display=swap');
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 601px) {
  
 
 h1 {
     font-family: 'Permanent Marker', cursive;
     color: black;
-    font-size: 100px;
+    font-size: 45px;
     
 }
 h2{
     font-family: 'Permanent Marker', cursive;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
 
 }
 p{
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Permanent Marker', cursive;
 }
 .section {
@@ -195,11 +195,16 @@ p{
 .email{
     font-size: 35px;
 }
+#nameMain{
+    font-size: 150px;
+}
     }
 
     @media only screen and (max-width: 600px) {
  
-
+        #nameMain{
+    font-size: 100px;
+}
  h1 {
      font-family: 'Permanent Marker', cursive;
      color: black;
@@ -209,11 +214,11 @@ p{
  h2{
     font-family: 'Permanent Marker', cursive;
     color: black;
-    font-size: 20px;
+    font-size: 15px;
 
 }
  p{
-     font-size: 15px;
+     font-size: 10px;
      font-family: 'Permanent Marker', cursive;
  }
  .section {
@@ -237,11 +242,12 @@ p{
      margin-top: 0px;
  }
  .email{
-     font-size: 25px;
+     font-size: 20px;
  }
  #getIn{
      margin-bottom: 30%;
  }
      }
+   
 </style>
 </html>
