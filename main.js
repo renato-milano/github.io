@@ -40,8 +40,8 @@ jQuery(function($, undefined) {
             window.open('/Portfolio.html',"_self");
          }else if(command=="who am i"){
             this.echo('[[;rgb(255,255,255);]\nYou.\n]');
-         }else if(command=="more skills.txt"){
-            this.echo('\nSkills Achieved:\n\n- JS\n- JAVA\n- PYTHON\n- VUE.JS\n- PHP\n- C/C++\n- CLOUD\n- HEROKU\n- TOMCAT\n');
+         }else if(command=="federica"){
+            this.echo('[[;rgb(255,255,255);]\nFederica is a special person for me.\nShe is the kindest person i ever met.\nIf I had one only wish in my entire life should be her happiness probably.\nShe is my Star and my Blessness.\nwith ❤️ \n\n- Renato\n]');
          }else if(command=="more skills.txt"){
             this.echo('\nSkills Achieved:\n\n- JS\n- JAVA\n- PYTHON\n- VUE.JS\n- PHP\n- C/C++\n- CLOUD\n- HEROKU\n- TOMCAT\n');
          }else if(command=="more skills.txt"){
