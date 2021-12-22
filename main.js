@@ -71,7 +71,7 @@ function render(term, text, font) {
     const cols = term.cols();
     $('[data-index="1"] div').addClass('neonText');
     return figlet.textSync(text, {
-        font:'Sub-Zero',
+        font:'DOS Rebel',
         width: cols,
         whitespaceBreak: true
     });
