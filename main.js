@@ -27,7 +27,7 @@ jQuery(function($, undefined) {
         }else if(command=="help"){
             this.echo('[[;rgb(255,255,255);]\nCommand List:\n\n- open : Exit this and open the Portfolio with classic User Interface :)\n\n'+
             '- ls : List files in the current directory.\n\n- more <filename> || cat <filename> : open the file named as <filename>\n\n'+
-            '- who-am-i : In case you didn\'t know.\n\n'+
+            '- who am i : In case you didn\'t know.\n\n'+
             '- whythis: Full Explanation of my vision about this section in my portfolio.\n]');
          }else if(command=="more skills.txt"||command=="cat skills.txt"){
             this.echo('[[;rgb(255,255,255);]\nSkills Achieved:\n\n- OOP and procedural programming paradigm\n- SQL and NOSQL Databases'+
@@ -38,7 +38,7 @@ jQuery(function($, undefined) {
             this.echo('[[;rgb(255,255,255);]\nOh you wanna know why this... \nSo basically I...\nYeah it\'s just...\nI dont\' know, i\'m just a Matrix fan who loves to learn new things tbh.\n]');
          }else if(command=="open"){
             window.open('/Portfolio.html',"_self");
-         }else if(command=="who-am-i"){
+         }else if(command=="who am i"){
             this.echo('[[;rgb(255,255,255);]\nYou.\n]');
          }else if(command=="more skills.txt"){
             this.echo('\nSkills Achieved:\n\n- JS\n- JAVA\n- PYTHON\n- VUE.JS\n- PHP\n- C/C++\n- CLOUD\n- HEROKU\n- TOMCAT\n');
