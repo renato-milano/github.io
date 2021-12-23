@@ -35,7 +35,7 @@
   -webkit-transition:  0.3s ease-in-out;
   border: none;
   box-shadow: 0px 0px 20px 9px #62ff62;
-  transform: scale(1.1); /* Equal to scaleX(2) scaleY(0.5) */
+  transform: scale(1.005); /* Equal to scaleX(2) scaleY(0.5) */
 }
 .btn-danger{
   color: black;
@@ -47,7 +47,7 @@
   -webkit-transition:  0.3s ease-in-out;
   border: none;
   box-shadow: 0px 0px 20px 9px red;
-  transform: scale(1.1); /* Equal to scaleX(2) scaleY(0.5) */
+  transform: scale(1.005); /* Equal to scaleX(2) scaleY(0.5) */
 }
 .btn{
   margin : 0.5rem;
