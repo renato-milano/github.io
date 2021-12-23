@@ -17,6 +17,41 @@
 .cmd{
     color:green !important;
 }
+#ControlPannel{
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.btn-success{
+  color: black;
+  background-color: var(--color);
+  transform: 2s ease-in-out;
+}
+.btn-success:hover{
+  background-color: var(--color);
+  -webkit-transition:  0.3s ease-in-out;
+  border: none;
+  box-shadow: 0px 0px 20px 9px #62ff62;
+  transform: scale(1.1); /* Equal to scaleX(2) scaleY(0.5) */
+}
+.btn-danger{
+  color: black;
+  background-color: red;
+  transform: 0.3s ease-in-out;
+}
+.btn-danger:hover{
+  background-color: red;
+  -webkit-transition:  0.3s ease-in-out;
+  border: none;
+  box-shadow: 0px 0px 20px 9px red;
+  transform: scale(1.1); /* Equal to scaleX(2) scaleY(0.5) */
+}
+.btn{
+  margin : 0.5rem;
+}
 @keyframes neon4 {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #b6ff00,
