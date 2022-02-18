@@ -98,8 +98,8 @@ const preload = () => {
           this.data = {
   
               text: 'RENATO\nMILANO',
-              amount: 2000,
-              particleSize: 0.5,
+              amount: 1500,
+              particleSize: 1,
               particleColor: 0xffffff,
               textSize: 16,
               area: 250,
