@@ -2,6 +2,11 @@
     --size: 1.3;
     --color:#62ff62;
 }
+body{
+  
+}
+
+
 .terminal{
     height: 100%!important;
     color:#62ff62 !important;
