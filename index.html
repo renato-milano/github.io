@@ -95,31 +95,31 @@
     </div>
     <div class="flex flex-col justify-center items-center p-2">
       <div class="rounded-xl my-[20vh] p-5">
-        <span class="text-focus-in lg:text-xl text-lg text-right poppins-regular text-iglm"
+        <span class="drop-shadow-md text-focus-in lg:text-xl text-lg text-right poppins-regular text-iglm"
           >Hey there!</span
         >
         <div class="text-focus-in flex flex-row items-center">
           <h1 class="text-center">
-            <span class="lg:text-6xl text-5xl poppins-regular text-iglm item-start"
+            <span class="drop-shadow-lg lg:text-6xl text-5xl poppins-regular text-iglm item-start"
               >Renato Milano</span
             >
           </h1>
           <img src="assets/ren1.jpg" class="w-[20vh] lg:w-[30vh]" />
         </div>
-        <p class="text-focus-in text-xm poppins-light text">
+        <p class="drop-shadow-lg text-focus-in text-xm poppins-light text">
           A Software Developer and Consultat!
         </p>
       </div>
     </div>
     <div id="about"class="mt-[5vh]"></div>
     <div class="mt-[20vh] h-screen lg:px-40 px-10 items-start">
-      <p class="lg:text-6xl text-5xl poppins-regular text-iglm">About<span> Me</span></p>
+      <p class="drop-shadow-lg lg:text-6xl text-5xl poppins-regular text-iglm">About<span> Me</span></p>
       <div class="pt-2">
         <img
           src="assets/about.jpg"
           class="p-2 float-left lg:h-[40vh] h-[20vh]"
         />
-        <p class="text-focus-in text-xl lg:text-2xl poppins-light p-2">
+        <p class="drop-shadow-lg drop-shadow-lgtext-focus-in text-xl lg:text-2xl poppins-light p-2">
           Hi ! I'm Renato Milano, I'm 28 years old and I'm a Computer Science
           student at the Università degli Studi di Salerno, Italy. I've been
           close to a computer since an early age, and been passionate about it
@@ -134,13 +134,13 @@
     </div>
     <div id="skills"class="mt-[5vh]"></div>
     <div class="mt-[20vh] h-screen lg:px-40 px-10 items-start">
-      <p class="lg:text-6xl text-5xl poppins-regular text-iglm">My<span> Skills</span></p>
+      <p class="drop-shadow-lg lg:text-6xl text-5xl poppins-regular text-iglm">My<span> Skills</span></p>
       <div class="pt-2">
         <img
           src="assets/work.png"
           class="p-2 float-right lg:h-[40vh] h-[20vh]"
         />
-        <p class="text-focus-in text-xl lg:text-2xl poppins-light p-2">
+        <p class="drop-shadow-lg text-focus-in text-xl lg:text-2xl poppins-light p-2">
           Here i should probably make a list of languages and Tecnology i have
           experienced with but... That list could be tedious to read. So you
           have just to know that I handled with all kind of projects, from
@@ -155,7 +155,7 @@
     </div>
     <div id="projects"class="mt-[5vh]"></div>
     <div class="mt-[20vh] h-screen lg:px-40 px-10 items-start">
-      <p class="lg:text-6xl text-5xl poppins-regular text-iglm">
+      <p class="drop-shadow-lg lg:text-6xl text-5xl poppins-regular text-iglm">
         Let's do it <span> Togheter!</span>
       </p>
       <div class="pt-2">
@@ -163,7 +163,7 @@
           src="assets/meetgreen.png"
           class="p-2 float-right lg:h-[40vh] h-[20vh]"
         />
-        <p class="text-focus-in text-xl lg:text-2xl poppins-light p-2">
+        <p class="drop-shadow-lg text-focus-in text-xl lg:text-2xl poppins-light p-2">
           Do you need a reliable developer to bring your next project to life?
           I’m here to help you turn your ideas into concrete digital solutions.
           Whether you’re looking to create an engaging website, develop a
@@ -178,7 +178,7 @@
     </div>
     <div id="contacts" class="mt-[5vh]"></div>
     <div class="mt-[20vh] h-[50vh] lg:px-40 px-10">
-      <p class="lg:text-6xl text-5xl poppins-regular text-iglm">Get in touch!</p>
+      <p class="drop-shadow-lg lg:text-6xl text-5xl poppins-regular text-iglm">Get in touch!</p>
       <div class="pt-10">
         <div class="flex flex-row items-center">
           <a
@@ -242,6 +242,25 @@
       
     </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const targetElement = document.getElementById('skills');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Seleziona tutti i figli <p> e aggiungi la classe 'visible'
+                        const paragraphs = targetElement.querySelectorAll('p');
+                        paragraphs.forEach(p => p.classList.add('visible'));
+                        // Puoi interrompere l'osservazione dopo l'aggiunta della classe
+                        // observer.unobserve(targetElement);
+                    }
+                });
+            });
+
+            observer.observe(targetElement);
+        });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
