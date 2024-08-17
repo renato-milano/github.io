@@ -1,41 +1,247 @@
-<html><head>
- 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-    <script src="https://unpkg.com/figlet@1.5.2/lib/figlet.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet"/>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renato Milano</title>
-</head>
-<body>
-    <div id="ControlPannel">
-        <button onclick="OpenHome()"type="button" class="btn btn-success"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-        </svg>HOMPAGE</button>
-        <button onclick="Reload()" type="button" class="btn btn-success"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M2 12C2 16.97 6.03 21 11 21C13.39 21 15.68 20.06 17.4 18.4L15.9 16.9C14.63 18.25 12.86 19 11 19C4.76 19 1.64 11.46 6.05 7.05C10.46 2.64 18 5.77 18 12H15L19 16H19.1L23 12H20C20 7.03 15.97 3 11 3C6.03 3 2 7.03 2 12Z" />
-        </svg>RELOAD</button>
-        
-    </div>
-</body>
-<script>
-    function Reload(){
-        window.open('https://renato-milano.github.io','_self');
-    }
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "640px",
+            // => @media (min-width: 640px) { ... }
 
-    function OpenHome(){
-        window.open('https://renato-milano.github.io/Portfolio.html','_self');
-    }
-</script>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
-    .btn{
-        font-family: 'Kalam', sans-serif;
-    }
-</style>
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "1024px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+          extend: {
+            colors: {
+              iglm: "#003cff",
+              primary: "#324aa8",
+              secondary: {
+                DEFAULT: "#FF9C01",
+                100: "#FF9001",
+                200: "#FF8E01",
+              },
+              black: {
+                DEFAULT: "#000",
+                100: "#1E1E2D",
+                200: "#232533",
+              },
+              gray: {
+                100: "#CDCDE0",
+              },
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="flex w-full sticky top-0 z-50 bg-white fade-in-top text-focus-in absolute justify-center pl-0"
+    >
+      <div class="group">
+        <div class="bg-white group-hover:bg-blue-200 duration-500 p-5">
+          <a
+            class="poppins-light text-iglm text-xs group-hover:text-white group-hover:text-lg duration-500"
+            href="#about"
+            >About</a
+          >
+        </div>
+      </div>
+      <div class="group">
+        <div class="group-hover:bg-blue-200 duration-500 p-5">
+          <a
+            class="poppins-light text-iglm text-xs group-hover:text-white group-hover:text-lg duration-500"
+            href="#skills"
+            >Skills</a
+          >
+        </div>
+      </div>
+      <div class="group">
+        <div class="group-hover:bg-blue-200 duration-500 p-5">
+          <a
+            class="poppins-light text-iglm text-xs group-hover:text-white group-hover:text-lg duration-500"
+            href="#projects"
+            >Projects</a
+          >
+        </div>
+      </div>
+      <div class="group">
+        <div class="group-hover:bg-blue-200 duration-500 p-5">
+          <a
+            class="poppins-light text-iglm text-xs group-hover:text-white group-hover:text-lg duration-500"
+            href="#contacts"
+            >Contacts</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center h-screen p-2">
+      <div class="rounded-xl p-5">
+        <span class="text-focus-in text-lg text-right poppins-regular text-iglm"
+          >Hey there!</span
+        >
+        <div class="text-focus-in flex flex-row items-center">
+          <h1 class="text-center">
+            <span class="text-5xl poppins-regular text-iglm text-center"
+              >Renato Milano</span
+            >
+          </h1>
+          <img src="assets/ren1.jpg" class="w-[20vh]" />
+        </div>
+        <p class="text-focus-in text-xm poppins-light text">
+          A Software Developer and Consultat!
+        </p>
+      </div>
+    </div>
+    <div id="about"class="mt-[5vh]"></div>
+    <div class="mt-[20vh] h-screen lg:px-20 px-10 items-start">
+      <p class="text-5xl poppins-regular text-iglm">About<span> Me</span></p>
+      <div class="pt-2">
+        <img
+          src="assets/about.jpg"
+          class="p-2 float-left lg:h-[40vh] h-[20vh]"
+        />
+        <p class="text-focus-in text-xm poppins-light p-2">
+          Hi ! I'm Renato Milano, I'm 28 years old and I'm a Computer Science
+          student at the Università degli Studi di Salerno, Italy. I've been
+          close to a computer since an early age, and been passionate about it
+          ever since. I like to build all kind of stuff from simple
+          <span class="text-iglm"> Scripts </span> to complex<span
+            class="text-iglm"
+          >
+            Web-App Projects</span
+          >. Oh right, I Love to Travel , Bikes, VideoGames...
+        </p>
+      </div>
+    </div>
+    <div id="skills"class="mt-[5vh]"></div>
+    <div class="mt-[20vh] h-screen lg:px-20 px-10 items-start">
+      <p class="text-5xl poppins-regular text-iglm">My<span> Skills</span></p>
+      <div class="pt-2">
+        <img
+          src="assets/work.png"
+          class="p-2 float-right lg:h-[40vh] h-[20vh]"
+        />
+        <p class="text-focus-in text-xm poppins-light p-2">
+          Here i should probably make a list of languages and Tecnology i have
+          experienced with but... That list could be tedious to read. So you
+          have just to know that I handled with all kind of projects, from
+          <span class="text-iglm"> C Scripts</span> to large
+          <span class="text-iglm"> Java/Python </span> projects working with
+          Backend Frameworks and
+          <span class="text-iglm"> JS Enviroments</span> as Frontend Dev. I have
+          experience with <span class="text-iglm">SQL and NOSQL</span> data
+          managment too. I simply love to Learn how things were made!
+        </p>
+      </div>
+    </div>
+    <div id="projects"class="mt-[5vh]"></div>
+    <div class="mt-[20vh] h-screen lg:px-20 px-10 items-start">
+      <p class="text-5xl poppins-regular text-iglm">
+        Let's do it <span> Togheter!</span>
+      </p>
+      <div class="pt-2">
+        <img
+          src="assets/meetgreen.png"
+          class="p-2 float-right lg:h-[40vh] h-[20vh]"
+        />
+        <p class="text-focus-in text-xm poppins-light p-2">
+          Do you need a reliable developer to bring your next project to life?
+          I’m here to help you turn your ideas into concrete digital solutions.
+          Whether you’re looking to create an engaging website, develop a
+          functional application, or optimize an existing system, I’m ready to
+          put my experience to work for you. I offer a flexible and personalized
+          service, adapting to the specific needs of your project with the goal
+          of delivering high-quality results within the agreed timelines. I’ll
+          work with you step by step, ensuring transparency, constant
+          communication, and a results-oriented approach.
+        </p>
+      </div>
+    </div>
+    <div id="contacts" class="mt-[5vh]"></div>
+    <div class="mt-[20vh] h-[50vh] lg:px-20 px-10 items-start">
+      <p class="text-5xl poppins-regular text-iglm">Get in touch!</p>
+      <div class="pt-10">
+        <div class="flex flex-row items-center">
+          <a
+            data-twe-toggle="tooltip"
+            title=""
+            href="mailto:renatomilanodev@gmail.com"
+            target="_blank"
+            class=" flex items-center"
+            data-twe-original-title="Share via Gmail"
+          >
+            <span class="[&amp;>svg]:h-8 [&amp;>svg]:w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#003cff"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                ></path>
+              </svg>
+            </span>
+          </a>
+          <p class="text-focus-in text-xm poppins-light p-2">
+            Reach me by Email
+          </p>
+        </div>
+        <a href="https://github.com/renato-milano"
+        target="_blank">
+        <div class="flex flex-row  items-center">
+          <!-- Github -->
+        
+          <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#333]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              />
+            </svg>
+          </span>
+          <p class="text-focus-in text-xm poppins-light p-2">
+            Github
+          </p>
+        </div>
+    </a>
+    <a href="https://www.linkedin.com/in/renato-milano-a52b61192/" target="_blank"></a>
+        <div class="flex flex-row  items-center">
+            <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#0077b5]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                  <path
+                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+              </span>
+            <p class="text-focus-in text-xm poppins-light p-2">
+              Linkedin
+            </p>
+        
+          </div>
+        </a>
+      </div>
+      
+    </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
